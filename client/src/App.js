@@ -6,7 +6,9 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
+import './assets/css/bootstrap.min.css';
+import './assets/css/styles.css';
+import './assets/css/colors.css';
 
 import TopNav from './components/TopNav';
 

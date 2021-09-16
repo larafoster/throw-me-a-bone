@@ -6,13 +6,13 @@ import {
   NavDropdown, 
   
   } from 'react-bootstrap';
-  
+
 const TopNav = () => {
   return (
     <>
 <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand href="#home">Throw Me A Bone</Navbar.Brand>
+    <Navbar.Brand href="/">Throw Me A Bone</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
