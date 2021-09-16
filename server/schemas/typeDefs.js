@@ -5,15 +5,21 @@ const typeDefs = gql`
     _id: ID!
     username: String!
     email: String
+    savedDogs: [Dog]
   }
 
-  type Auth {
-    token: ID!
-    user: User
+  type Dog {
+    dogId: ID!
+    name: String
+    breed: String
+    image: String
+    age: String
+    spaynuet: String
   }
 
   type Query {
     me: User
+    dogs: [Dog]
   }
 
   type Mutation {

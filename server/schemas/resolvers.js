@@ -13,6 +13,13 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+    // dogs: async (parent, args, context) => {  @@ Need to look into this further
+    //   if (context.dogs) {
+    //     const dogData = await Dog.find({})
+
+    //     return dogData;
+    //   }
+    // }
   },
 
   Mutation: {
@@ -38,7 +45,6 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-
   },
 };
 
