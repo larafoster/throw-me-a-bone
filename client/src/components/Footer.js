@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Dogs = () => {
+const Footer = () => {
   return (
     <>
 <div className="Container">
 
-This is dog.js section</div>
+This is Footer.js section</div>
 
     </>
   );
 }
 
-export default Dogs;
+export default Footer;
