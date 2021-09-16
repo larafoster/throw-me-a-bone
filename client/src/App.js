@@ -8,7 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 
-import AllDogs from './components/AllDogs';
+import PetList from './components/PetList';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -37,7 +37,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <AllDogs />
+      <PetList />
     </ApolloProvider>
   );
 }

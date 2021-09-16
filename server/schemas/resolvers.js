@@ -13,13 +13,6 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-    // dogs: async (parent, args, context) => {  @@ Need to look into this further
-    //   if (context.dogs) {
-    //     const dogData = await Dog.find({})
-
-    //     return dogData;
-    //   }
-    // }
   },
 
   Mutation: {
@@ -44,6 +37,32 @@ const resolvers = {
 
       const token = signToken(user);
       return { token, user };
+    },
+    saveDog: async (parent, { dogData }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { savedDogs: dogData } },
+          { new: true }
+        );
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeDog: async (parent, { dogId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedDogs: { dogId } } },
+          { new: true }
+        );
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };
