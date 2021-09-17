@@ -27,9 +27,9 @@ const PetList = () => {
   });
 
   // create function to handle saving a dog to our database
-  const handleSaveDog = async (dogId) => {
+  const handleSaveDog = async (id) => {
     // find the dog in `allDogs` state by the matching id
-    const dogToSave = allDogs.find((dog) => dog.dogId === dogId);
+    const dogToSave = allDogs.find((dog) => dog.id === id);
 
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -43,7 +43,7 @@ const PetList = () => {
         variables: { dogData: { ...dogToSave } },
       });
       console.log(savedDogIds);
-      setSavedDogIds([...savedDogIds, dogToSave.dogId]);
+      setSavedDogIds([...savedDogIds, dogToSave.id]);
     } catch (err) {
       console.error(err);
     }
@@ -63,7 +63,7 @@ const PetList = () => {
         <CardColumns>
           {allDogs.map((dog) => {
             return (
-              <Card key={dog.dogId} border="dark">
+              <Card key={dog.id} border="dark">
                 {dog.image ? (
                   <Card.Img
                     src={dog.image}
@@ -78,12 +78,12 @@ const PetList = () => {
                   {Auth.loggedIn() && (
                     <Button
                       disabled={savedDogIds?.some(
-                        (savedId) => savedId === dog.dogId
+                        (savedId) => savedId === dog.id
                       )}
                       className="btn-block btn-info"
-                      onClick={() => handleSaveDog(dog.dogId)}
+                      onClick={() => handleSaveDog(dog.id)}
                     >
-                      {savedDogIds?.some((savedId) => savedId === dog.dogId)
+                      {savedDogIds?.some((savedId) => savedId === dog.id)
                         ? `${dog.name} is already saved!`
                         : "Save This dog!"}
                     </Button>
