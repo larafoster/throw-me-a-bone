@@ -1,46 +1,99 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Card, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { useMutation } from '@apollo/client';
 
-const AdoptForm = (props) => {
+
+
+const AdoptForm = () => {
+  const [userFormData, setUserFormData] = useState({
+    firstName: '',
+    lastName: '',
+    street: '',
+    city: '',
+    userState: '',
+    zip: '',
+    email: '',
+    dogName: '',
+    message: ''
+  })
+  const [addData, { error }] = useMutation()
+  const handleInput = (e) => {
+    const { name, value } = e.target
+    setUserFormData({...userFormData, [name]: value})
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const form = e.currentTarget
+
+    try {
+      const { data } = await addData({
+        variables: {...userFormData},
+      });
+      console.log(data)
+  } catch (err) {
+      console.log(err)
+  }}
   return (
     <Form>
-      <FormGroup>
-        <Label for="exampleEmail">First Name</Label>
-        <Input type="fname" name="fname" id="First" placeholder="Please enter your first name." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">Last Name</Label>
-        <Input type="lname" name="lname" id="Last" placeholder="Please enter your last name." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">Street Address</Label>
-        <Input type="address" name="address" id="Address" placeholder="Please enter you street address." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">City</Label>
-        <Input type="city" name="city" id="City" placeholder="Please enter the city you live in." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">State</Label>
-        <Input type="stateL" name="stateL" id="State" placeholder="Please enter the state you live in." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">Zip Code</Label>
-        <Input type="zip" name="zip" id="Zip" placeholder="Please enter your zip code." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">Email</Label>
-        <Input type="email" name="email" id="Email" placeholder="Please enter your email." />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleEmail">Name of dog that you're interested in</Label>
-        <Input type="dogname" name="dogname" id="Dog" placeholder="Please enter the name of the dog you want to adopt!" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleText">Is there anything we need to know about your home to ensure this adoption would be a good fit?</Label>
-        <Input type="textarea" name="extrainfo" id="Info" />
-      </FormGroup>
-      <Button>Submit</Button>
+      <Container>
+        <Card>
+          <FormGroup row>
+            <Label for="exampleEmail">First Name</Label>
+            <Col sm={10}>
+            <Input type="fname" name="firstName" id="First" placeholder="First name" />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">Last Name</Label>
+            <Col sm={10}>
+            <Input type="lname" name="lastName" id="Last" placeholder="Last name" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">Street Address</Label>
+            <Col sm={10}>
+            <Input type="address" name="street" id="Address" placeholder="Street address" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">City</Label>
+            <Col sm={10}>
+            <Input type="city" name="city" id="City" placeholder="City" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">State</Label>
+            <Col sm={10}>
+            <Input type="stateL" name="userState" id="State" placeholder="State" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">Zip Code</Label>
+            <Col sm={10}>
+            <Input type="zip" name="zip" id="Zip" placeholder="Zip code" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">Email</Label>
+            <Col sm={10}>
+            <Input type="nemail" name="email" id="Email" placeholder="Email" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+            <Label for="exampleEmail">Name of dog that you're interested in</Label>
+            <Col sm={10}>
+            <Input type="dogname" name="dogName" id="Dog" placeholder="Name of dog" />
+            </Col>
+            </FormGroup>
+          <FormGroup row>
+          <Label for="exampleText">Is there anything we need to know about your home to ensure this adoption would be a good fit?</Label>
+          <Col sm={10}>
+          <Input type="textarea" name="message" id="Info" />
+          </Col>
+          </FormGroup>
+          <Button row center>Proceed to checkout!</Button>
+          </Card>
+        </Container>
       </Form>
     )
   }
