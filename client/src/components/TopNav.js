@@ -10,7 +10,7 @@ import {
 const TopNav = () => {
   return (
     <>
-<Navbar bg="light" expand="lg">
+<Navbar bg="light" expand="md">
   <Container>
     <Navbar.Brand href="/">Throw Me A Bone</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />

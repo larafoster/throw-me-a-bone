@@ -1,14 +1,15 @@
 import React from 'react';
-
-const Footer = () => {
+import { Container } from 'react-bootstrap';
+const StickyFooter = () => {
   return (
     <>
-<div className="Container">
-
-This is Footer.js section</div>
-
+<footer class="footer mt-auto py-3 bg-light">
+ 
+<Container>
+Place sticky footer content here.
+</Container>
+</footer>
     </>
   );
 }
-
-export default Footer;
+export default StickyFooter;
