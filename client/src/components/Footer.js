@@ -3,11 +3,15 @@ import { Container } from 'react-bootstrap';
 const StickyFooter = () => {
   return (
     <>
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3">
  
 <Container>
-Place sticky footer content here.
-</Container>
+<img
+                    alt="..."
+                    className="img-fluid"
+                    width="400"
+                    src={require("../assets/images/logo-dev2.png").default}
+                  /></Container>
 </footer>
     </>
   );

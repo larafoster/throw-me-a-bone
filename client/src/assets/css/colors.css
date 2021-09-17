@@ -83,3 +83,6 @@ color: var(--text-md);
     background-color: var(--alabaster) !important;
 }
 
+.footer {
+    background-color: var(--pale-yellow);
+}
