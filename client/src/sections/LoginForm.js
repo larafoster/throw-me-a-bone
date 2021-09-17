@@ -1,7 +1,7 @@
 // see SignupForm.js for comments
 
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button, Alert } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
@@ -57,6 +57,12 @@ const LoginForm = () => {
 
   return (
     <>
+    <Container>
+    <Row>
+    <Col xs={6}>
+    <Card className="mt-5">
+     <Card.Header>Login Form</Card.Header>
+     <Card.Body>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -95,7 +101,7 @@ const LoginForm = () => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
-        <Button
+        <Button className="mt-3"
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
@@ -103,6 +109,11 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
+      </Card.Body>
+       </Card>
+       </Col>
+       </Row>
+      </Container>
     </>
   );
 };
