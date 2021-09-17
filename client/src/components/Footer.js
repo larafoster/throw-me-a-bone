@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 const StickyFooter = () => {
   return (
     <>
-<footer class="footer mt-auto py-3">
+<footer className="footer mt-auto py-3">
  
 <Container>
 <img
