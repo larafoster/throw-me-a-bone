@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
-
+import { Form, Container, Card, Button, Alert } from 'react-bootstrap';
+ 
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
@@ -63,6 +63,8 @@ const SignupForm = () => {
   return (
     <>
       {/* This is needed for the validation functionality above */}
+          <Container>
+    <Card className="mt-5">
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert
@@ -132,6 +134,8 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
+      </Card>
+      </Container>
     </>
   );
 };

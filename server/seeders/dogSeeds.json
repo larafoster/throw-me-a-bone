@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Boxer",
+        "breed": "Border Collie",
+        "image": "src/assets/images/dogs/dog1.jpg",
+        "age": 4,
+        "spaynuet": true
+    },
+    {
+        "id": 2,
+        "name": "Caroline",
+        "breed": "Terrier",
+        "image": "src/assets/images/dogs/dog2.jpg",
+        "age": 1,
+        "spaynuet": false
+    },
+    {
+        "id": 3,
+        "name": "Bubbles",
+        "breed": "Shih Tzu",
+        "image": "src/assets/images/dogs/dog3.jpg",
+        "age": 6,
+        "spaynuet": true
+    },
+    {
+        "id": 4,
+        "name": "Shindo",
+        "breed": "Shiba Inu",
+        "image": "src/assets/images/dogs/dog4.jpg",
+        "age": 4,
+        "spaynuet": true
+    },
+    {
+        "id": 5,
+        "name": "Beef",
+        "breed": "Beagle",
+        "image": "src/assets/images/dogs/dog5.jpg",
+        "age": 9,
+        "spaynuet": true
+    },
+    {
+        "id": 6,
+        "name": "Henry & Ford",
+        "breed": "Miniature Schnauzer",
+        "image": "src/assets/images/dogs/dog6.jpg",
+        "age": 3,
+        "spaynuet": true
+    },
+    {
+        "id": 7,
+        "name": "Pinecone",
+        "breed": "Husky",
+        "image": "src/assets/images/dogs/dog7.jpg",
+        "age": 1,
+        "spaynuet": false
+    },
+    {
+        "id": 8,
+        "name": "Sammy",
+        "breed": "Terrier",
+        "image": "src/assets/images/dogs/dog8.jpg",
+        "age": 3,
+        "spaynuet": true
+    },
+    {
+        "id": 9,
+        "name": "Beau",
+        "breed": "Shepherd",
+        "image": "src/assets/images/dogs/dog9.jpg",
+        "age": 7,
+        "spaynuet": true
+    },
+    {
+        "id": 10,
+        "name": "Jersey",
+        "breed": "Miniature Pinscher",
+        "image": "src/assets/images/dogs/dog10.jpg",
+        "age": 6,
+        "spaynuet": true
+    }
+]

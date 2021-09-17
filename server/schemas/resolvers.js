@@ -38,7 +38,32 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    saveDog: async (parent, { dogData }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { savedDogs: dogData } },
+          { new: true }
+        );
 
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeDog: async (parent, { dogId }, context) => {
+      if (context.user) {
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedDogs: { dogId } } },
+          { new: true }
+        );
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 

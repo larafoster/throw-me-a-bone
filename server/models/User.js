@@ -1,6 +1,9 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
+// import schema from Dog.js
+const dogSchema = require('./Dog');
+
 const userSchema = new Schema(
   {
     username: {
@@ -18,11 +21,13 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    // set savedDogs to be an array of data that adheres to the DogsSchema
+    // savedDogs: [dogSchema],
   },
   // set this to use virtual below
   {
-
-    },
+  
+  }
 );
 
 // hash user password
