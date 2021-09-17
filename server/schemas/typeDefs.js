@@ -17,6 +17,11 @@ const typeDefs = gql`
     spaynuet: String
   }
 
+  type Auth {
+    _id: ID!
+    token: String 
+  }
+
   type Query {
     me: User
     dogs: [Dog]
@@ -29,3 +34,4 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+
