@@ -98,3 +98,4 @@ const AdoptForm = () => {
       </Form>
     )
   }
+  export default AdoptForm
