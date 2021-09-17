@@ -12,7 +12,7 @@ import { saveDogIds, getSavedDogIds } from "../utils/localStorage";
 
 import Auth from "../utils/auth";
 
-const PetList = () => {
+const PetList = ({ response }) => {
   // create state for holding returned google api data
   const [allDogs, setallDogs] = useState([]);
   // create state to hold saved dogId values
@@ -48,6 +48,7 @@ const PetList = () => {
       console.error(err);
     }
   };
+  console.log(response?.data);
   return (
     <>
         <Container>
@@ -61,14 +62,18 @@ const PetList = () => {
             : `Find out more by clicking on the each dog's picture.`}
         </h2>
         <CardColumns>
-          {allDogs.map((dog) => {
+          {
+            response.loading
+            ? <div>unloading</div>
+            : response.data.dogs.map((dog) => {
             return (
-              <Card key={dog.id} border="dark">
+              <Card key={dog.id} border="dark" m={10}>
                 {dog.image ? (
                   <Card.Img
                     src={dog.image}
                     alt={`The picture for ${dog.name}`}
                     variant="top"
+                    style={{width: 150}}
                   />
                 ) : null}
                 <Card.Body>
