@@ -12,8 +12,8 @@ import './assets/css/colors.css';
 
 import TopNav from './components/TopNav.js';
 import Footer from './components/Footer.js';
-import AppRouter from './Router.js';
-
+/* import AppRouter from './Router.js';
+ */
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,7 +42,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <TopNav />
-      <AppRouter />
+     {/*  <AppRouter /> */}
+     Hello
       <Footer />
     </ApolloProvider>
   );
