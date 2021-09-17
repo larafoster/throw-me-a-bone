@@ -13,12 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-<<<<<<< HEAD
-    "concurrently": "^5.3.0"
-=======
->>>>>>> 9685f5b305319ccd48a7cc4464abf2b16ac572c2
-  },
-  "dependencies": {
-  
+    "concurrently": "^5.1.0"
   }
 }
