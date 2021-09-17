@@ -1,12 +1,21 @@
 import React from 'react';
+import {
+  Container,
+  CardColumns,
+  Card,
+
+} from 'react-bootstrap';
 
 const Home = () => {
   return (
     <>
-<div className="Container">
-
-some content
-</div>
+<Container>/
+<CardColumns>
+<Card>
+Dog info here
+</Card>
+</CardColumns>
+</Container>
 
     </>
   );

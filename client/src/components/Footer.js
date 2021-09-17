@@ -9,8 +9,8 @@ const StickyFooter = () => {
 <img
                     alt="..."
                     className="img-fluid"
-                    width="400"
-                    src={require("../assets/images/logo-dev2.png").default}
+                    width="600"
+                    src={require("../assets/images/tab-logo.svg").default}
                   /></Container>
 </footer>
     </>
