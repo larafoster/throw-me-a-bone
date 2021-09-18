@@ -19,7 +19,7 @@ function NoMatch() {
             </Col>
           </Row>
           <Row>
-          <Col md="12">
+          <Col>
           <img
                           className="img-fluid"
                           alt="..."
