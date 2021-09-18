@@ -59,7 +59,7 @@ const LoginForm = () => {
     <>
     <Container>
     <Row>
-    <Col xs={6}>
+   <Col xs={12} md={5}>
     <Card className="mt-5">
      <Card.Header>Login Form</Card.Header>
      <Card.Body>
@@ -70,8 +70,10 @@ const LoginForm = () => {
           show={showAlert}
           variant="danger"
         >
+         <h5>Dog-gone-it!</h5>
           Something went wrong with your login credentials!
         </Alert>
+
         <Form.Group>
           <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
