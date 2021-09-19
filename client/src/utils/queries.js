@@ -23,6 +23,7 @@ export const QUERY_DOGS =gql`
   dogs {
   id
   name
+  description
   breed
   image
   age

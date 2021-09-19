@@ -1,22 +1,24 @@
 import React from 'react';
 import {
+  useQuery
+} from '@apollo/client';
+import { QUERY_DOGS } from '../utils/queries';
+import PetList from '../components/PetList.js';
+import {
   Container,
-  CardColumns,
-  Card,
+
 
 } from 'react-bootstrap';
 
 const Home = () => {
+    const {loading, data, error} = useQuery(QUERY_DOGS);
+  if (data) {console.log(data)};
   return (
     <>
-<Container>/
-<CardColumns>
-<Card>
-Dog info here
-</Card>
-</CardColumns>
-</Container>
 
+<Container>
+  <PetList response={{loading, data, error}} />
+</Container>
     </>
   );
 }

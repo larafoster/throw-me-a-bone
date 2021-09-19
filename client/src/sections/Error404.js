@@ -14,12 +14,12 @@ function NoMatch() {
               This is probably not what you were looking for. <br />
                             </span>
             </h2>
-                <Button color="warning" href="/about"><i className="fas fa-undo-alt"></i> Try again</Button>{' '}
+                <Button variant="warning" href="/"><i className="fas fa-undo-alt"></i> Try again</Button>{' '}
          
             </Col>
           </Row>
           <Row>
-          <Col md="12">
+          <Col>
           <img
                           className="img-fluid"
                           alt="..."
