@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 // home page
 import Home from "./sections/Home";
 // portfolio sections
-import About from "./sections/About.js";
+import PetDetail from "./sections/PetDetail.js";
 import Login from "./sections/LoginForm.js";
 import Signup from "./sections/SignupForm.js";
 import Contact from "./sections/Contact.js";
@@ -17,7 +17,7 @@ const AppRouter = () => {
 <>
         <Switch>
         <Route exact path="/" component={Home} /> 
-        <Route  path="/about" component={About} /> 
+        <Route  path="/pet" component={PetDetail} /> 
         <Route  path="/login"component={Login} /> 
         <Route  path="/signup" component={Signup} /> 
         <Route  path="/contact" component={Contact} /> 

@@ -12,14 +12,15 @@ const typeDefs = gql`
     id: ID!
     name: String
     breed: String
+    description: String
     image: String
     age: String
     spaynuet: String
   }
 
   type Auth {
-    _id: ID!
-    token: String 
+    token: ID!
+    user: User
   }
 
   type Query {

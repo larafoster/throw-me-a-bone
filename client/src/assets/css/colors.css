@@ -1,5 +1,3 @@
-/* CSS HEX */
-
 /* Global Colors*/
 :root {
 --melon: #fec5bbff;
@@ -27,16 +25,18 @@
 --burgundy: #412722;
 --text-dark: #3B3D3C;
 --text-md: #787D7A;
+--dog-orange: #f7931e;
 }
  a {
      color: var(--burgundy);
  }
 
  a:hover {
-    color: var(--success-dk);
+    color: var(--dog-orange);
  }
 
- .nav a {
+
+ .nav-link a {
 color: var(--text-dark) !important;
  }
 
@@ -53,6 +53,28 @@ color: var(--text-md);
     color: var(--text-md);
     text-decoration: none;
   }
+
+/* Navbar Colors*/ 
+.bg-light {
+    background-color: var(--alabaster) !important;
+}
+
+.footer {
+    background-color: #efefef;
+}
+
+.alert-danger {
+    background-color: var(--danger-lt);
+    color: white;
+}
+
+ .btn-close {
+    position: absolute;
+    top: 0;
+    right: 50;
+    z-index: 2;
+    padding: 1.25rem 1rem;
+}
 /* Button Colors*/
 .btn-danger {
     color: #fff;
@@ -78,11 +100,15 @@ color: var(--text-md);
     border-color: var(--warning);
 }
 
-/* Navbar Colors*/ 
-.bg-light {
-    background-color: var(--alabaster) !important;
+
+.btn-dog {
+    color: #fff;
+    background-color: var(--dog-orange);
+    border-color: var(--warning-dk);
 }
 
-.footer {
-    background-color: #efefef;
+.btn-dog:hover {
+    color: #fff;
+    background-color: var(--warning-lt);
+    border-color: var(--warning);
 }

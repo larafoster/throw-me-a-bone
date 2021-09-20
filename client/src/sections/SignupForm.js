@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Container, Card, Button, Alert } from 'react-bootstrap';
+import { Form, Container, Row, Col, Card, Button, Alert } from 'react-bootstrap';
  
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
@@ -64,7 +64,11 @@ const SignupForm = () => {
     <>
       {/* This is needed for the validation functionality above */}
           <Container>
+    <Row>
+   <Col xs={12} md={5}>
     <Card className="mt-5">
+         <Card.Header>Signup Form</Card.Header>
+     <Card.Body>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert
@@ -120,7 +124,7 @@ const SignupForm = () => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
-        <Button
+        <Button className="mt-3"
           disabled={
             !(
               userFormData.username &&
@@ -132,9 +136,12 @@ const SignupForm = () => {
           variant="success"
         >
           Submit
-        </Button>
+        </Button >
       </Form>
+            </Card.Body>
       </Card>
+             </Col>
+       </Row>
       </Container>
     </>
   );

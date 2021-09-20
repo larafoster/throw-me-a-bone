@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import LikeBtn from "./LikeBtn";
 import {
   Container,
   Row,
   Col,
+  Button,
   Card,
   CardGroup
 } from "react-bootstrap";
@@ -15,7 +14,7 @@ import { saveDogIds, getSavedDogIds } from "../utils/localStorage";
 
 import Auth from "../utils/auth";
 
-const PetList = ({ response }) => {
+const Adopt = ({ response }) => {
   // create state for holding returned google api data
   const [allDogs, setallDogs] = useState([]);
   // create state to hold saved dogId values
@@ -54,7 +53,7 @@ const PetList = ({ response }) => {
   console.log(response?.data);
   return (
     <>
-        <Container>
+        <Container className="px-5">
           <Row>
           <h1>Adopt or Sponsor one of these beauties!</h1>
 
@@ -65,67 +64,41 @@ const PetList = ({ response }) => {
             : `Find out more by clicking on the each dog's picture.`}
         </h3>
         </Row>
-          <Row> <Col>
+        <Row>
+        <Col>
         <CardGroup>
           {
             response.loading
             ? <div>unloading</div>
             : response.data.dogs.map((dog) => {
             return (
-              <Card key={dog.id} >
-              <Card.Header >
-              <h3 className="d-flex d-flex justify-content-between">{dog.name}
-               <LikeBtn />
-              </h3>
-           
-              </Card.Header>
-        <div className="content">
-          
-                        <div className="content-overlay"></div>
+              <Card key={dog.id} border="dark" m={10}>
                 {dog.image ? (
                   <Card.Img
                     src={dog.image}
                     alt={`The picture for ${dog.name}`}
                     variant="top"
-                    className="img-fluid"
-                    
+                    style={{width: 300}}
                   />
                 ) : null}
-                 <div className="content-details fadeIn-bottom">
-                          <p>
-                            {dog.description}
-                          </p>
-                          </div>
-                </div>
                 <Card.Body>
-                  <Card.Title>Breed: {dog.breed}</Card.Title>
-                 
-
-                </Card.Body>
-                <Card.Footer>
-                <div className="button">
-                                 {/*  {Auth.loggedIn() && (
+                  <Card.Title>{dog.name}</Card.Title>
+                  <p className="small">Breed: {dog.breed}</p>
+                  <Card.Text>{dog.description}</Card.Text>
+                  {Auth.loggedIn() && (
                     <Button
                       disabled={savedDogIds?.some(
                         (savedId) => savedId === dog.id
                       )}
-                      className="btn btn-info"
+                      className="btn-block btn-info"
                       onClick={() => handleSaveDog(dog.id)}
                     >
                       {savedDogIds?.some((savedId) => savedId === dog.id)
                         ? `${dog.name} is already saved!`
                         : "Save This dog!"}
                     </Button>
-                  )} */}
-                  <Link to="pet" className="btn btn-dog btn-sm">
-                    <i class="fad fa-hands-heart fa-2x"></i>
-                    Adopt Me
-                  </Link>                  <Link to="pet" className="btn btn-success btn-sm">
-                    <i class="fad fa-hand-holding-usd fa-2x"></i>
-                    Sponsor Me
-                  </Link>
-                  </div>
-                </Card.Footer>
+                  )}
+                </Card.Body>
               </Card>
             );
           })}
@@ -133,9 +106,8 @@ const PetList = ({ response }) => {
         </Col>
         </Row>
       </Container>
-    
     </>
   );
 };
 
-export default PetList;
+export default Adopt;

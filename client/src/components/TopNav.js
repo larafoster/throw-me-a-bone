@@ -1,33 +1,48 @@
-import React from 'react';
-import { 
-  Container,
-  Navbar,
-  Nav,
-  NavDropdown, 
-  
-  } from 'react-bootstrap';
+import React from "react";
+import Auth from "../utils/auth";
+import { Container, Navbar, Nav } from "react-bootstrap";
 
-const TopNav = () => {
+function TopNav() {
+  function showLoginOut() {
+    if (Auth.loggedIn()) {
+      return (
+        <Nav.Link href="/" onClick={() => Auth.logout()}>
+          Logout
+        </Nav.Link>
+      );
+    } else {
+      return (
+        <Nav>
+          <Nav.Link href="login">Login</Nav.Link>
+          <Nav.Link href="signup">Signup</Nav.Link>
+        </Nav>
+      );
+    }
+  }
+
   return (
     <>
-<Navbar bg="light" expand="md">
-  <Container>
-    <Navbar.Brand href="/">Throw Me A Bone</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
-        <Nav.Link href="#/">Home</Nav.Link>
-<Nav.Link href="about">About</Nav.Link>        
-<Nav.Link href="profile">Profile</Nav.Link>        
-<Nav.Link href="contact">Contact</Nav.Link>        
-<Nav.Link href="login">Login</Nav.Link>        
-<Nav.Link href="signup">signup</Nav.Link>        
+    <Navbar bg="light" expand="sm" className="fixed-top">
+      <Container>
+        <Navbar.Brand href="/">
+          <img
+            alt="..."
+            className="img-fluid pe-5"
+            width="450"
+            src={require("../assets/images/tab-logo.svg").default}
+          />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="contact">Contact</Nav.Link>
 
-      </Nav>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-
+            {showLoginOut()}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     </>
   );
 }
