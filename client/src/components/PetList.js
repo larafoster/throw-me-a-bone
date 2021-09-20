@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
+import LikeBtn from "./LikeBtn";
 import {
   Container,
   Row,
   Col,
-  Button,
   Card,
   CardGroup
 } from "react-bootstrap";
@@ -76,7 +75,7 @@ const PetList = ({ response }) => {
               <Card key={dog.id} >
               <Card.Header >
               <h3 className="d-flex d-flex justify-content-between">{dog.name}
-                 <i className="fas fa-heart text-danger"></i>
+               <LikeBtn />
               </h3>
            
               </Card.Header>
