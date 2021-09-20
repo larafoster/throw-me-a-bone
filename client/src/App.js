@@ -9,6 +9,7 @@ import { setContext } from "@apollo/client/link/context";
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/styles.css";
 import "./assets/css/colors.css";
+import "./assets/css/blog.css";
 
 import TopNav from "./components/TopNav.js";
 import Footer from "./components/Footer.js";
