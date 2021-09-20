@@ -9,7 +9,7 @@ const typeDefs = gql`
   }
 
   type Dog {
-    dogId: ID!
+    id: ID!
     name: String
     breed: String
     image: String

@@ -17,3 +17,16 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const QUERY_DOGS =gql`
+{
+  dogs {
+  id
+  name
+  breed
+  image
+  age
+  spaynuet
+  }
+}
+`;
