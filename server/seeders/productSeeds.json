@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Snack",
+    "description": "Throw me a Bone already! Or any kind of crunchy treat.",
+    "price": 15,
+    "quantity": 1
+  },
+   {
+    "id": 2,
+    "name": "Stuffy",
+    "description": "It gets lonely in the kennel, I would love a soft friend to snuggle with.",
+    "price": 25,
+    "quantity": 1
+  },
+    {
+    "id": 3,
+    "name": "Dinner",
+    "description": "Dinner for days that is! This will cover a bag of nutritious food.",
+    "price": 35,
+    "quantity": 1
+  },
+    {
+    "id": 4,
+    "name": "Bed",
+    "description": "A comfy hammock bed to keep me warm and dry,",
+    "price": 50,
+    "quantity": 1
+  },
+      {
+    "id": 5,
+    "name": "Health",
+    "description": "Whether it's shots, a wellness exam, or a snip, your donation will go a long way to keep me healthy.",
+    "price": 75,
+    "quantity": 1
+  },
+      {
+    "id": 6,
+    "name": "Adoption",
+    "description": "I'd love to come home with you! Just need to make sure your home is suitable to my needs.",
+    "price": 125,
+    "quantity": 1
+  }
+]

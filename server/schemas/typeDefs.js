@@ -13,9 +13,30 @@ const typeDefs = gql`
     name: String
     breed: String
     description: String
+    gender: String
     image: String
     age: String
     spaynuet: String
+  }
+
+type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+  }
+
+  type Checkout {
+    session: ID
   }
 
   type Auth {
@@ -24,7 +45,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    me: User
+    user: User
     dogs: [Dog]
   }
 

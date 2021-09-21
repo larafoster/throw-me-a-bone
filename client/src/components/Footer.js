@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { Container } from 'react-bootstrap';
 const StickyFooter = () => {
   return (
     <>
-<footer class="footer mt-auto py-3 fixed-bottom">
-  <div class="container d-flex justify-content-center align-items-center">
+<footer className="footer mt-auto py-0 fixed-bottom">
+  <div className="container d-flex justify-content-center align-items-center">
   <img
                     alt="..."
                     className="img-fluid"

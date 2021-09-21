@@ -42,19 +42,17 @@ export const SAVE_DOG = gql`
   }
 `;
 
-export const REMOVE_DOG = gql`
-  mutation removeDog($dogId: ID!) {
-    removeDog(dogId: $dogId) {
-      _id
-      username
-      email
-      savedDogs {
-        dogId
-        breed
-        image
+export const ADD_ORDER = gql`
+  mutation addOrder($products: [ID]!) {
+    addOrder(products: $products) {
+      purchaseDate
+      products {
+        _id
+        name
         description
-        age
-        spaynuet
+        price
+        quantity
+        
       }
     }
   }

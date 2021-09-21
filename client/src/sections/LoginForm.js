@@ -58,10 +58,10 @@ const LoginForm = () => {
   return (
     <>
     <Container>
-    <Row>
-   <Col xs={12} md={5}>
+        <Row className="justify-content-md-center mt-250">
+     <Col xs={12} md={5}>
     <Card className="mt-5">
-     <Card.Header>Login Form</Card.Header>
+     <Card.Header><h3>Login Form</h3></Card.Header>
      <Card.Body>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
@@ -75,9 +75,10 @@ const LoginForm = () => {
         </Alert>
 
         <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
             type="text"
+            className="my-2"
+            size="lg"
             placeholder="Your email"
             name="email"
             onChange={handleInputChange}
@@ -90,9 +91,10 @@ const LoginForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
+            className="my-2"
+            size="lg"
             placeholder="Your password"
             name="password"
             onChange={handleInputChange}

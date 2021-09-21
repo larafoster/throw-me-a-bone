@@ -22,9 +22,11 @@ function NoMatch() {
           <Col>
           <img
                           className="img-fluid"
+                         
                           alt="..."
                           src={require("../assets/images/error.svg").default}
                         />
+                     
           </Col>
           </Row>
         </Container>

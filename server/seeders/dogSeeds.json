@@ -5,7 +5,8 @@
     "breed": "Border Collie",
     "image": "images/dogs/dog1.jpg",
     "description": "I'm an approx. 2 year old male. I love, love, love to PLAY! I play well with humans, kids and other dogs.",
-    "age": 4,
+    "age": 2,
+    "gender": "male",
     "spaynuet": true
   },
   {
@@ -14,8 +15,8 @@
     "breed": "Terrier",
     "image": "images/dogs/dog2.jpg",
     "description": "coming soon",
-
     "age": 1,
+    "gender": "female",
     "spaynuet": false
   },
   {
@@ -24,8 +25,8 @@
     "breed": "Shih Tzu",
     "image": "images/dogs/dog3.jpg",
     "description": "coming soon",
-
     "age": 6,
+    "gender": "female",
     "spaynuet": true
   },
   {
@@ -34,8 +35,8 @@
     "breed": "Shiba Inu",
     "image": "images/dogs/dog4.jpg",
     "description": "coming soon",
-
     "age": 4,
+    "gender": "female",
     "spaynuet": true
   },
   {
@@ -44,8 +45,8 @@
     "breed": "Beagle",
     "image": "images/dogs/dog5.jpg",
     "description": "coming soon",
-
     "age": 9,
+    "gender": "male",
     "spaynuet": true
   },
   {
@@ -54,8 +55,8 @@
     "breed": "Miniature Schnauzer",
     "image": "images/dogs/dog6.jpg",
     "description": "coming soon",
-
-    "age": 3,
+    "age": 1,
+    "gender": "female",
     "spaynuet": true
   },
   {
@@ -64,8 +65,8 @@
     "breed": "Husky",
     "image": "images/dogs/dog7.jpg",
     "description": "coming soon",
-
     "age": 1,
+    "gender": "male",
     "spaynuet": false
   },
   {
@@ -74,8 +75,8 @@
     "breed": "Terrier",
     "image": "images/dogs/dog8.jpg",
     "description": "coming soon",
-
-    "age": 3,
+    "age": 1,
+    "gender": "female",
     "spaynuet": true
   },
   {
@@ -84,8 +85,8 @@
     "breed": "Shepherd",
     "image": "images/dogs/dog9.jpg",
     "description": "coming soon",
-
     "age": 7,
+    "gender": "male",
     "spaynuet": true
   },
   {
@@ -94,8 +95,8 @@
     "breed": "Miniature Pinscher",
     "image": "images/dogs/dog10.jpg",
     "description": "coming soon",
-
     "age": 6,
+    "gender": "female",
     "spaynuet": true
   }
 ]

@@ -23,6 +23,9 @@ const dogSchema = new Schema({
     type: Number,
     required: true,
   },
+    gender: {
+    type: String,
+  },
   spaynuet: {
     type: Boolean,
     required: true,
