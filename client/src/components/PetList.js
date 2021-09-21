@@ -116,21 +116,23 @@ const PetList = ({ response }) => {
     <div className="d-flex justify-content-between">
     <div className="row">
       <div className="col text-center">
-<a href="https://twitter.com/intent/tweet?text=Check This adorable pup needs your support. Find out more here: https://tab-lara.herokuapp.com/" rel="noreferrer"> <i className="fab fa-twitter text-lblue fa-2x"></i></a> Tweet it!</div><span></span>
+<a href="https://twitter.com/intent/tweet?text=Check This adorable pup needs your support. Find out more here: https://tab-lara.herokuapp.com/" rel="noreferrer"> <i className="fab fa-twitter text-lblue fa-2x"></i></a> </div><span></span>
 </div>
     <div className="row">
 
 <div className="col text-center"> <a
                   href="mailto:?subject=Check out this cute pup!&body=The shelter is looking for sponsors!  https://tab-lara.herokuapp.com/"><i
-                    className="fas fa-envelope text-orange fa-2x"></i></a>Send an Email</div>
+                    className="fas fa-envelope text-orange fa-2x pe-2"></i></a></div>
                     </div>
                         <div className="row">
 
 <div class="col text-center"> <a
                   href="sms:add contacts&body=Check out this cute pup!  https://tab-lara.herokuapp.com"><i
-                    class="fas fa-mobile-alt text-red fa-2x"></i></a> Text it </div>
-</div>
+                    class="fas fa-mobile-alt text-red fa-2x"></i></a>  </div>
+
                     </div>
+                    </div> <p className="small ps-2 pt-3">Help us spread the word. Tweet, Email or Text your friends!</p>
+
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="2">
