@@ -84,11 +84,7 @@ THEN I am presented with a form to login to my account and the Navbar only displ
   3. There is also a seeds file that can be run using npm run seed.
   4. To start the app in development, type 'npm run develop' in the terminal.
 
-<<<<<<< HEAD
 ## Technologies
-=======
-## Technologies Used
->>>>>>> a8edfc7a6dfdd5fa328de21d6925c37c9448db11
 
 [1.] Apollo Server with GraphQL queries and mutations to fetch and modify data
 [2.] JSON Web Token (JWT) authentication middleware
@@ -111,7 +107,7 @@ THEN I am presented with a form to login to my account and the Navbar only displ
 ![Screenshot from deployed website](https://github.com/larafoster/throw-me-a-bone/blob/main/public/images/screenshot3.png )
 
  
-  ## Contributing
+## Contributing
   - [Lara Foster](https://github.com/larafoster) 
   - [Tommy Eubank](https://github.com/eubanktr) 
   - [Carson Coyle](https://github.com/Coyle555) 
@@ -122,7 +118,7 @@ THEN I am presented with a form to login to my account and the Navbar only displ
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   
-  ## Questions
+## Questions
   Contact me if you have any questions about this project:
 
   - [Send me an email](mailto:larafoster.dev@gmail.com)
