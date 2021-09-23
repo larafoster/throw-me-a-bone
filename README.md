@@ -98,9 +98,6 @@ User Story
 ![Screenshot from deployed website](./client/public/images/screenshot2.png)
 ![Screenshot from deployed website](./client/public/images/screenshot3.png)
 ![Screenshot from deployed website](./client/public/images/screenshot4.png)
-![Screenshot from deployed website](https://github.com/larafoster/throw-me-a-bone/blob/main/public/images/screenshot2.png)
-![Screenshot from deployed website](https://github.com/larafoster/throw-me-a-bone/blob/main/public/images/screenshot3.png )
-
  
 ## Contributing
   - [Lara Foster](https://github.com/larafoster) 
@@ -108,7 +105,7 @@ User Story
   - [Carson Coyle](https://github.com/Coyle555) 
   - [Lorenzo Street](https://github.com/Lorenzoxst) 
 
-   ## License
+## License
  This project is licensed under the MIT License
 
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
