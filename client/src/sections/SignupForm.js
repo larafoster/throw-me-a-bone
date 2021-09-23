@@ -3,7 +3,6 @@ import { Form, Container, Row, Col, Card, Button, Alert } from 'react-bootstrap'
  
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
 import Auth from '../utils/auth';
 
 const SignupForm = () => {
@@ -64,8 +63,8 @@ const SignupForm = () => {
     <>
       {/* This is needed for the validation functionality above */}
           <Container>
-    <Row>
-   <Col xs={12} md={5}>
+        <Row className="justify-content-md-center mt-250">
+    <Col xs={12} md={5}>
     <Card className="mt-5">
          <Card.Header>Signup Form</Card.Header>
      <Card.Body>
@@ -81,9 +80,10 @@ const SignupForm = () => {
         </Alert>
 
         <Form.Group>
-          <Form.Label htmlFor="username">Username</Form.Label>
           <Form.Control
             type="text"
+            size="lg"
+            className="my-2"          
             placeholder="Your username"
             name="username"
             onChange={handleInputChange}
@@ -96,9 +96,10 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
             type="email"
+            size="lg"
+            className="my-2"
             placeholder="Your email address"
             name="email"
             onChange={handleInputChange}
@@ -111,9 +112,10 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
+            size="lg"
+            className="my-2" 
             placeholder="Your password"
             name="password"
             onChange={handleInputChange}

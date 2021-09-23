@@ -26,15 +26,9 @@
 --text-dark: #3B3D3C;
 --text-md: #787D7A;
 --dog-orange: #f7931e;
+--info: #17a2b8;
+
 }
- a {
-     color: var(--burgundy);
- }
-
- a:hover {
-    color: var(--dog-orange);
- }
-
 
  .nav-link a {
 color: var(--text-dark) !important;
@@ -111,4 +105,16 @@ color: var(--text-md);
     color: #fff;
     background-color: var(--warning-lt);
     border-color: var(--warning);
+}
+
+.text-lblue {
+    color: var(--info);
+}
+
+.text-red {
+    color: var(--danger-lt);
+}
+
+.text-orange {
+    color: var(--dog-orange);
 }
