@@ -11,8 +11,8 @@ This application supports animal welfare organizations by providing them with a 
   - [Credits](#credits)
   - [License](#license)
 
-## User Story
-
+## User
+User Story
 ```md
 
 There are two user types:
