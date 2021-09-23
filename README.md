@@ -13,20 +13,20 @@ This application supports animal welfare organizations by providing them with a 
 
 ## User
 User Story
-```md
+	```md
 
-There are two user types:
-[1] The animal welfare operator
-	As a shelter operator, I WANT an engaging and easy-to-implement platform to encourage animal lovers to support the shelter.
+	There are two user types:
+	[1] The animal welfare operator
+		As a shelter operator, I WANT an engaging and easy-to-implement platform to encourage animal lovers to support the shelter.
 
-[2] The end user
-	As a USER and animal lover, I WANT an easy way to lend my support whether or not I am ready to adopt.
-	I WANT to search for dogs at my favorite shelter
-	SO THAT I can either adopt, sponsor or share information about the pet.
-```
+	[2] The end user
+		As a USER and animal lover, I WANT an easy way to lend my support whether or not I am ready to adopt.
+		I WANT to search for dogs at my favorite shelter
+		SO THAT I can either adopt, sponsor or share information about the pet.
+	```
 
 ## Acceptance Criteria
-```md
+	```md
 		WHEN I load the application
 		THEN I am presented with a list of current pets with the options
 			[ ] Login/Signup 
@@ -69,8 +69,8 @@ There are two user types:
 		THEN I am presented with a form to signup as a new user
 
 		WHEN I click the LOGIN link
-		THEN I am presented with a form to login to my account and the Navbar only displays the LOGOUT user option.```
-
+		THEN I am presented with a form to login to my account and the Navbar only displays the LOGOUT user option.
+	```
 ## Installation
 
   Once you clone this repository, you will need to follow these steps:
