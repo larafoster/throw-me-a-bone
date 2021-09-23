@@ -72,7 +72,11 @@ THEN I am presented with a form to signup as a new user
 WHEN I click the LOGIN link
 THEN I am presented with a form to login to my account and the Navbar only displays the LOGOUT user option.
 
+<<<<<<< HEAD
 ## Installation
+=======
+  ## Installation
+>>>>>>> a8edfc7a6dfdd5fa328de21d6925c37c9448db11
 
   Once you clone this repository, you will need to follow these steps:
   1. In your terminal type 'npm install'
@@ -80,7 +84,11 @@ THEN I am presented with a form to login to my account and the Navbar only displ
   3. There is also a seeds file that can be run using npm run seed.
   4. To start the app in development, type 'npm run develop' in the terminal.
 
+<<<<<<< HEAD
 ## Technologies
+=======
+## Technologies Used
+>>>>>>> a8edfc7a6dfdd5fa328de21d6925c37c9448db11
 
 [1.] Apollo Server with GraphQL queries and mutations to fetch and modify data
 [2.] JSON Web Token (JWT) authentication middleware

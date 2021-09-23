@@ -8,27 +8,59 @@ body {
     height: 100%;
 }
 
-footer {
-    position: sticky;
-    height: auto;
-    width: 100%;
-left:0;
-bottom:0;
-right:0;
-}
 
 p {
     font-size: 1.3rem;
 }
+ a {
+     color: var(--burgundy);
+     text-decoration: none;
+ }
 
-a {
-    text-decoration: none;
-}
+ a:hover {
+    color: var(--dog-orange);
+ }
+
 
 a:hover {
     text-decoration: none;
 }
+.accordion-button {
+    color: var(--white);
+    background-color: var(--success);
+    box-shadow: none;
+}
+.accordion-button  {
+    color: var(--white);
+    background-color: var(--success-dk);
+    box-shadow: none;
+}
+.accordion-button a {
+    color: white;
+    background-color: var(--success-dk);
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: white;
+    background-color: var(--success-lt);
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) a {
+    color: white;
+}
+.accordion-button .collapsed {
+color: white;
 
+}
+button.accordion-button.collapsed {
+    color: white;
+
+}
+
+button.accordion-button.collapsed::after {
+    color: white;
+
+}
 .navbar {
     padding-top: 1.5rem;
     padding-bottom: .8rem;
@@ -48,12 +80,13 @@ Button.close {
     justify-self: flex-end;
 }
 
-.card-group .card {
-    min-width: 300px;
+.card-group .card  {
+    min-width: 325px;
     max-width: 325px;
     margin: 20px 20px;
 border: 1px solid rgba(0,0,0,.125) !important;
 }
+
 
 .card-group>.card:not(:last-child) {
     border-top-right-radius: 1px solid rgba(0,0,0,.125) !important;
@@ -67,8 +100,11 @@ border: 1px solid rgba(0,0,0,.125) !important;
     justify-items: center;
     
 }
-
-
+ 
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
 .footer {
     border-top: 8px dotted;
     color: var(--success-lt);
@@ -167,3 +203,10 @@ border: 1px solid rgba(0,0,0,.125) !important;
     top: 80%
 }
 /* END Card Image Overlay */
+.text-center {
+    text-align: center;
+}
+.wrapper {
+    max-width: 800px;
+    display: flex;
+}
