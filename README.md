@@ -26,57 +26,52 @@ There are two user types:
 ```
 
 ## Acceptance Criteria
-
 ```md
-WHEN I load the application
-THEN I am presented with a list of current pets with the options
-	[ ] Login/Signup 
-	[ ] Card Components with pictures and short description of each pet.
-	[ ] Each pet has 3 collapsible buttons:
-		[-] Adopt
-		[-] Sponsor
-		[-] Share
+		WHEN I load the application
+		THEN I am presented with a list of current pets with the options
+			[ ] Login/Signup 
+			[ ] Card Components with pictures and short description of each pet.
+			[ ] Each pet has 3 collapsible buttons:
+				[-] Adopt
+				[-] Sponsor
+				[-] Share
 
-WHEN I click on the PET picture, it will display more detail;
-THEN I am presented with an more detail about the pet and the buttons are still visible;
-WHEN I click the ADOPT button
-THEN I am presented with more information about adoption fees and a link to adoption form.
-	Future Dev includes the adoption form and payment integration with Stripe or other payment processor.
-	User must be logged in to add to account and process adoption.
+		WHEN I click on the PET picture, it will display more detail;
+		THEN I am presented with an more detail about the pet and the buttons are still visible;
+		WHEN I click the ADOPT button
+		THEN I am presented with more information about adoption fees and a link to adoption form.
+			Future Dev includes the adoption form and payment integration with Stripe or other payment processor.
+			User must be logged in to add to account and process adoption.
 
 
-WHEN I click the SHARE button
-THEN I am presented with a link with pre-populated information
-		[-] Twitter - link goes to user's twitter feed with an active link back to the pet
-		[-] Email - link opens the user's mail client with a pre-populated subject and body content with an active link back to the pet.
-		[-] Text - link opens the user's messaging app with a pre-populated message and an active link back to the pet.
+		WHEN I click the SHARE button
+		THEN I am presented with a link with pre-populated information
+				[-] Twitter - link goes to user's twitter feed with an active link back to the pet
+				[-] Email - link opens the user's mail client with a pre-populated subject and body content with an active link back to the pet.
+				[-] Text - link opens the user's messaging app with a pre-populated message and an active link back to the pet.
 
-WHEN I click the SPONSOR button
-THEN I am presented with 
-	[] 	Information about Sponsoring a pet and
-	[]	Sponsorship options/levels such as:
-		[-] Buy me a snack $15
-		[-] Buy me a stuffy $25		
-		[-] Buy me dinner $35
-		
-	Future Dev includes dynamic sponsor options (the structure has been built with PRODUCTS model, schema, typedefs and queries).
-	Future Dev includes the sponsorship form and payment integration with Stripe or other payment processor.
-	User must be logged in to add to account and process sponsorships.
+		WHEN I click the SPONSOR button
+		THEN I am presented with 
+			[] 	Information about Sponsoring a pet and
+			[]	Sponsorship options/levels such as:
+				[-] Buy me a snack $15
+				[-] Buy me a stuffy $25		
+				[-] Buy me dinner $35
+				
+			Future Dev includes dynamic sponsor options (the structure has been built with PRODUCTS model, schema, typedefs and queries).
+			Future Dev includes the sponsorship form and payment integration with Stripe or other payment processor.
+			User must be logged in to add to account and process sponsorships.
 
-WHEN I click the CONTACT link
-THEN I am presented with a contact form that is integrated with Formspree for instant contact notification.
+		WHEN I click the CONTACT link
+		THEN I am presented with a contact form that is integrated with Formspree for instant contact notification.
 
-WHEN I click the SIGNUP link
-THEN I am presented with a form to signup as a new user
+		WHEN I click the SIGNUP link
+		THEN I am presented with a form to signup as a new user
 
-WHEN I click the LOGIN link
-THEN I am presented with a form to login to my account and the Navbar only displays the LOGOUT user option.
+		WHEN I click the LOGIN link
+		THEN I am presented with a form to login to my account and the Navbar only displays the LOGOUT user option.```
 
-<<<<<<< HEAD
 ## Installation
-=======
-  ## Installation
->>>>>>> a8edfc7a6dfdd5fa328de21d6925c37c9448db11
 
   Once you clone this repository, you will need to follow these steps:
   1. In your terminal type 'npm install'
